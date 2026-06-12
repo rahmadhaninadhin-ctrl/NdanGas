@@ -1,177 +1,310 @@
-import React from 'react'
+import React from 'react';
 
 export default function Home() {
+  // Base URL Embed Figma tunggal milik Nadhin
+  const figmaBaseUrl = "https://embed.figma.com/design/qttuZOiFPCAXXFi2JMIbfD/Prototype-NdanGas";
+
   return (
-    <div className="min-h-screen bg-[#FFFDF9] text-gray-800 font-sans antialiased">
-      {/* NAVBAR */}
-      <nav className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-        <div className="text-2xl font-black text-orange-500 tracking-tight">
-          Ndan<span className="text-gray-800">Gas</span>
-        </div>
-        <div className="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
-          <a href="#empathize" className="hover:text-orange-500 transition-colors">Empathize</a>
-          <a href="#define" className="hover:text-orange-500 transition-colors">Define</a>
-          <a href="#ideate" className="hover:text-orange-500 transition-colors">Ideate</a>
-          <a href="#prototype" className="hover:text-orange-500 transition-colors">Prototype</a>
-          <a href="#test" className="hover:text-orange-500 transition-colors">Test</a>
+    <main className="min-h-screen bg-white text-gray-900 font-sans antialiased scroll-smooth">
+      
+      {/* NAVBAR FIXED */}
+      <nav className="fixed top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-md px-6 py-4">
+        <div className="mx-auto flex max-w-6xl items-center justify-between">
+          <div className="text-xl font-black tracking-tight text-orange-500">NdanGas</div>
+          <div className="hidden space-x-6 text-sm font-medium text-gray-600 md:flex">
+            <a href="#empati" className="hover:text-orange-500 transition-colors">Empati</a>
+            <a href="#masalah" className="hover:text-orange-500 transition-colors">Masalah</a>
+            <a href="#ide" className="hover:text-orange-500 transition-colors">Ide Solusi</a>
+            <a href="#purwarupa" className="hover:text-orange-500 transition-colors">Purwarupa</a>
+            <a href="#pengujian" className="hover:text-orange-500 transition-colors">Pengujian</a>
+          </div>
         </div>
       </nav>
 
       {/* HERO SECTION */}
-      <header className="max-w-4xl mx-auto text-center px-6 py-20 md:py-32 flex flex-col items-center justify-center">
-        <h1 className="text-6xl md:text-8xl font-black text-orange-500 tracking-tighter mb-6 animate-fade-in">
+      <section className="relative flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-orange-50 via-white to-white px-6 text-center pt-16">
+        <h1 className="mb-4 text-7xl font-extrabold tracking-tight text-orange-500 md:text-8xl">
           NdanGas
         </h1>
-        <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 tracking-tight max-w-2xl mb-6 leading-tight">
+        <p className="mb-6 text-xl font-bold text-gray-800 md:text-2xl max-w-3xl">
           Solusi Transportasi Modern yang Mengutamakan Kecepatan dan Kemudahan Alur Pemesanan
-        </h2>
-        <p className="text-base md:text-lg text-gray-600 max-w-2xl mb-10 leading-relaxed">
-          Studi kasus UI/UX mendalam menggunakan metode Pendekatan Desain (Design Thinking) 
-          untuk memangkas kerumitan proses pemesanan kendaraan online.
         </p>
-        
-        {/* 1 TOMBOL UTAMA */}
-        <div className="flex justify-center">
-          <a 
-            href="#prototype"
-            className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold shadow-lg transition-all transform hover:scale-105 active:scale-95 text-center"
-          >
-            Tampilkan Portofolio
+        <p className="max-w-2xl text-gray-600 mb-8">
+          Studi kasus UI/UX mendalam menggunakan metode Pendekatan Desain (Design Thinking) untuk memangkas kerumitan proses pemesanan kendaraan online.
+        </p>
+        <div className="flex gap-4">
+          <a href="#purwarupa" className="rounded-full bg-orange-500 px-6 py-3 font-semibold text-white shadow-lg shadow-orange-500/20 hover:bg-orange-600 transition-all">
+            Coba Purwarupa
+          </a>
+          <a href="#empati" className="rounded-full bg-gray-100 px-6 py-3 font-semibold text-gray-700 hover:bg-gray-200 transition-all">
+            Lihat Studi Kasus
           </a>
         </div>
-      </header>
+      </section>
 
-      {/* TAHAP 1: EMPATHIZE */}
-      <section id="empathize" className="max-w-5xl mx-auto px-6 py-16 border-t border-gray-100">
-        <div className="flex items-center space-x-3 mb-6">
-          <span className="bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Tahap 1</span>
-          <h3 className="text-2xl font-bold text-gray-900">Empathize</h3>
-        </div>
-        <p className="text-gray-600 leading-relaxed mb-6">
-          Kami melakukan wawancara mendalam dan menyebar kuesioner kepada mahasiswa serta pekerja komuter yang menggunakan layanan transportasi online setiap hari. Tujuannya adalah memahami perilaku, kebutuhan nyata, dan hambatan emosional mereka saat memesan kendaraan di jam sibuk.
-        </p>
-        <div className="grid md:grid-cols-2 gap-6 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+      {/* PROYEK OVERVIEW */}
+      <section className="border-y border-gray-100 bg-gray-50/50 py-12 px-6">
+        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-8 sm:grid-cols-3 text-center">
           <div>
-            <h4 className="font-bold text-gray-900 mb-2">💡 Temuan Utama</h4>
-            <p className="text-sm text-gray-600">Pengguna sering merasa cemas akibat ketidakpastian tarif dan alur aplikasi yang terlalu banyak klik penawaran promo.</p>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Jangka Waktu</p>
+            <p className="mt-2 text-lg font-bold text-gray-800">4 Minggu</p>
           </div>
           <div>
-            <h4 className="font-bold text-gray-900 mb-2">👤 Persona Pengguna</h4>
-            <p className="text-sm text-gray-600">Mahasiswa aktif dengan mobilitas tinggi yang membutuhkan kecepatan akses tanpa distraksi iklan pop-up.</p>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Perangkat Kerja</p>
+            <p className="mt-2 text-lg font-bold text-gray-800">Figma & FigJam</p>
+          </div>
+          <div>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Fokus Utama Desain</p>
+            <p className="mt-2 text-lg font-bold text-gray-800">Kecepatan & Kemudahan</p>
           </div>
         </div>
       </section>
 
-      {/* TAHAP 2: DEFINE */}
-      <section id="define" className="max-w-5xl mx-auto px-6 py-16 border-t border-gray-100">
-        <div className="flex items-center space-x-3 mb-6">
-          <span className="bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Tahap 2</span>
-          <h3 className="text-2xl font-bold text-gray-900">Define</h3>
-        </div>
-        <p className="text-gray-600 leading-relaxed mb-4">
-          Dari data empati, kami merumuskan masalah inti menggunakan metode *Point of View* (POV) i.e. menyusun tantangan desain utama:
-        </p>
-        <blockquote className="bg-orange-50/50 border-l-4 border-orange-500 p-4 rounded-r-xl my-6">
-          <p className="italic text-gray-700 font-medium">
-            "Bagaimana kita bisa membantu komuter urban memesan transportasi online secara instan dalam kurang dari 3 kali klik tanpa terganggu informasi non-esensial?"
+
+      {/* 1. EMPATHIZE SECTION */}
+      <section id="empati" className="mx-auto max-w-5xl px-6 py-24 border-b border-gray-100">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">1. Empati (Empathize)</h2>
+          <p className="mt-4 text-gray-600">
+            Tahap awal untuk memahami kebutuhan, motivasi, serta hambatan nyata yang dialami pengguna saat memesan layanan transportasi daring.
           </p>
-        </blockquote>
-      </section>
+        </div>
 
-      {/* TAHAP 3: IDEATE */}
-      <section id="ideate" className="max-w-5xl mx-auto px-6 py-16 border-t border-gray-100">
-        <div className="flex items-center space-x-3 mb-6">
-          <span className="bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Tahap 3</span>
-          <h3 className="text-2xl font-bold text-gray-900">Ideate</h3>
+        {/* EMBED: EMPATHIZE FRAME (Silakan ganti node-id=2124-840 jika berbeda) */}
+        <div className="w-full aspect-[16/9] overflow-hidden rounded-2xl border border-gray-200 shadow-xl bg-white mb-12">
+          <iframe 
+            className="w-full h-full"
+            src={`${figmaBaseUrl}?node-id=2124-840&embed-host=share`}
+            allowFullScreen
+            style={{ border: "0" }}
+          ></iframe>
         </div>
-        <p className="text-gray-600 leading-relaxed mb-6">
-          Sesi *brainstorming* menghasilkan beberapa prioritas fitur untuk memotong alur pemesanan tradisional yang berbelit-belit menjadi sistem satu halaman terintegrasi.
-        </p>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-            <div className="text-xl mb-2">⚡</div>
-            <h4 className="font-bold text-gray-900 mb-2">One-Tap Booking</h4>
-            <p className="text-xs text-gray-600">Menyimpan rute favorit rumah-kampus atau rumah-kantor agar bisa langsung dipesan dari halaman beranda utama.</p>
-          </div>
-          <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-            <div className="text-xl mb-2">💰</div>
-            <h4 className="font-bold text-gray-900 mb-2">Smart Price Lock</h4>
-            <p className="text-xs text-gray-600">Sistem transparan yang mengunci harga estimasi terbaik selama 2 menit pertama untuk menghindari lonjakan mendadak.</p>
-          </div>
-          <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm">
-            <div className="text-xl mb-2">🎯</div>
-            <h4 className="font-bold text-gray-900 mb-2">Clean Interface</h4>
-            <p className="text-xs text-gray-600">Antarmuka minimalis bebas banner iklan yang memprioritaskan peta navigasi dan pilihan jenis kendaraan.</p>
-          </div>
-        </div>
-      </section>
 
-      {/* TAHAP 4: PROTOTYPE */}
-      <section id="prototype" className="max-w-5xl mx-auto px-6 py-16 border-t border-gray-100">
-        <div className="flex items-center space-x-3 mb-6">
-          <span className="bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Tahap 4</span>
-          <h3 className="text-2xl font-bold text-gray-900">Prototype</h3>
-        </div>
-        <p className="text-gray-600 leading-relaxed mb-8">
-          Berikut adalah rancangan interaktif fidelitas tinggi (*High-Fidelity*) dari aplikasi NdanGas yang mengimplementasikan alur pemesanan kilat.
-        </p>
-        
-        {/* AREA MOCKUP / EMBED FIGMA */}
-        <div className="w-full bg-gray-900 aspect-video rounded-2xl shadow-2xl overflow-hidden flex items-center justify-center relative border-4 border-gray-800">
-          <div className="absolute inset-0 bg-gradient-to-tr from-orange-600/20 to-transparent pointer-events-none" />
-          <div className="text-center p-6 z-10">
-            <p className="text-orange-400 font-mono text-xs uppercase tracking-widest mb-2">[ Interactive Prototype Display ]</p>
-            <h4 className="text-white text-xl font-bold mb-4">Aplikasi NdanGas Live Preview</h4>
-            <span className="bg-white/10 text-white text-xs px-4 py-2 rounded-md backdrop-blur-sm border border-white/20">
-              Desain Antarmuka Pengguna Selesai Dikembangkan
-            </span>
+        <div className="grid gap-8 md:grid-cols-2">
+          <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+            <h3 className="font-bold text-lg text-gray-900 mb-4">Metodologi Riset</h3>
+            <ul className="space-y-3 text-gray-600 text-sm">
+              <li>• <strong className="text-gray-900">Wawancara Kualitatif:</strong> Berdialog langsung secara mendalam dengan mahasiswa yang merupakan pengguna aktif transportasi online.</li>
+              <li>• <strong className="text-gray-900">Observasi Langsung:</strong> Mengamati perilaku interaksi pengguna saat terburu-buru melakukan pemesanan kendaraan.</li>
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+            <h3 className="font-bold text-lg text-gray-900 mb-4">Temuan Utama Riset</h3>
+            <ul className="space-y-3 text-gray-600 text-sm">
+              <li>• <strong className="text-orange-600">Alur Terlalu Panjang:</strong> Terlahu banyak jendela iklan promosi yang mengalihkan fungsi utama menu pemesanan.</li>
+              <li>• <strong className="text-orange-600">Kurang Efisien:</strong> Pengisian titik lokasi penjemputan dan tujuan terpisah jauh sehingga membutuhkan ketukan layar tambahan.</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* TAHAP 5: TEST */}
-      <section id="test" className="max-w-5xl mx-auto px-6 py-16 border-t border-gray-100 mb-12">
-        <div className="flex items-center space-x-3 mb-6">
-          <span className="bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Tahap 5</span>
-          <h3 className="text-2xl font-bold text-gray-900">Test</h3>
-        </div>
-        <p className="text-gray-600 leading-relaxed mb-6">
-          Kami menguji prototipe ini menggunakan metode *Task-Based Usability Testing* kepada 5 pengguna baru berskala metrik keberhasilan tugas (*Task Success Rate*).
-        </p>
-        <div className="bg-white border border-gray-100 shadow-sm rounded-xl overflow-hidden">
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="bg-gray-50 border-b border-gray-100 text-xs font-bold uppercase text-gray-500 tracking-wider">
-                <th className="px-6 py-4">Metrik Evaluasi</th>
-                <th className="px-6 py-4">Aplikasi Lama</th>
-                <th className="px-6 py-4 text-orange-600">NdanGas Prototype</th>
-              </tr>
-            </thead>
-            <tbody className="text-sm divide-y divide-gray-50 text-gray-600">
-              <tr>
-                <td className="px-6 py-4 font-medium text-gray-900">Waktu Pemesanan Rata-rata</td>
-                <td className="px-6 py-4">45 - 60 Detik</td>
-                <td className="px-6 py-4 font-bold text-green-600">12 Detik</td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 font-medium text-gray-900">Jumlah Klik (*Clicks Needed*)</td>
-                <td className="px-6 py-4">6 - 8 Kali Klik</td>
-                <td className="px-6 py-4 font-bold text-green-600">2 Kali Klik</td>
-              </tr>
-              <tr>
-                <td className="px-6 py-4 font-medium text-gray-900">Skor Kepuasan SUS</td>
-                <td className="px-6 py-4">64 (Apt)</td>
-                <td className="px-6 py-4 font-bold text-green-600">82 (Excellent)</td>
-              </tr>
-            </tbody>
-          </table>
+
+      {/* 2. DEFINE SECTION */}
+      <section id="masalah" className="bg-gray-50/50 px-6 py-24 border-b border-gray-100">
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">2. Menentukan Masalah (Define)</h2>
+            <p className="mt-4 text-gray-600">Menyaring dan menganalisis data hasil temuan riset empati menjadi rumusan masalah inti serta mencari celah solusi potensial.</p>
+          </div>
+
+          {/* EMBED: DEFINE FRAME (Ganti node-id sesuai frame Define kamu) */}
+          <div className="w-full aspect-[16/9] overflow-hidden rounded-2xl border border-gray-200 shadow-xl bg-white mb-12">
+            <iframe 
+              className="w-full h-full"
+              src={`${figmaBaseUrl}?node-id=2124-840&embed-host=share`} 
+              allowFullScreen
+              style={{ border: "0" }}
+            ></iframe>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 mb-8">
+            <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+              <span className="text-xs font-bold uppercase text-orange-500 tracking-wider">Pernyataan Masalah (Problem Statement)</span>
+              <p className="mt-4 text-gray-700 leading-relaxed font-medium">
+                "Pengguna dengan tingkat kesibukan tinggi yang sering terburu-buru membutuhkan sistem pemesanan transportasi yang bersih dari elemen iklan dan memiliki alur instan, agar proses pemesanan selesai tanpa kebingungan visual."
+              </p>
+            </div>
+            <div className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm">
+              <span className="text-xs font-bold uppercase text-orange-500 tracking-wider">Pertanyaan Pemicu Solusi (How Might We)</span>
+              <ul className="mt-4 space-y-2 text-sm text-gray-600">
+                <li>1. Bagaimana kita bisa menyederhanakan halaman pemilihan lokasi agar bebas dari proses klik yang berulang?</li>
+                <li>2. Bagaimana menyajikan identitas pengemudi secara jelas tanpa menutup tampilan visual peta utama?</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-gray-50 border-t border-gray-100 py-8 text-center text-xs text-gray-500">
-        <p>© 2026 NdanGas Studio Case Study. Crafted for Excellence.</p>
-      </footer>
-    </div>
-  )
+
+      {/* 3. IDEATE SECTION */}
+      <section id="ide" className="mx-auto max-w-5xl px-6 py-24 border-b border-gray-100">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">3. Penyusunan Ide (Ideate)</h2>
+          <p className="mt-4 text-gray-600">
+            Proses eksplorasi gagasan kreatif dari sketsa mentah kasar hingga perancangan arsitektur informasi aplikasi yang matang.
+          </p>
+        </div>
+
+        <div className="space-y-16">
+          {/* A. Curah Ide & Crazy 8's */}
+          <div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">A. Curah Ide (Brainstorming) & Crazy 8's</h3>
+            <div className="w-full aspect-[16/9] overflow-hidden rounded-2xl border border-gray-200 shadow-md bg-white">
+              <iframe 
+                className="w-full h-full"
+                src={`${figmaBaseUrl}?node-id=199-776&embed-host=share`} 
+                allowFullScreen
+                style={{ border: "0" }}
+              ></iframe>
+            </div>
+          </div>
+
+          {/* B. Sketsa Kerangka Kasar (Low Fidelity Sketches) */}
+          <div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">B. Sketsa Kerangka Kasar (Low Fidelity Sketches)</h3>
+            <div className="w-full aspect-[16/9] overflow-hidden rounded-2xl border border-gray-200 shadow-md bg-white">
+              <iframe 
+                className="w-full h-full"
+                src={`${figmaBaseUrl}?node-id=2145-840&embed-host=share`} 
+                allowFullScreen
+                style={{ border: "0" }}
+              ></iframe>
+            </div>
+          </div>
+
+          {/* C. Alur Pengguna (User Flow) */}
+          <div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">C. Alur Jalur Pengguna (User Flow)</h3>
+            <div className="rounded-xl bg-orange-50 border border-orange-100 p-6 text-center text-sm font-semibold tracking-wide text-orange-700 flex flex-wrap justify-center gap-2 items-center mb-4">
+              <span>Daftar / Masuk Akun</span> <span>→</span>
+              <span>Halaman Beranda</span> <span>→</span>
+              <span>Input Lokasi & Tujuan</span> <span>→</span>
+              <span>Pilih Jenis Kendaraan</span> <span>→</span>
+              <span>Konfirmasi & Cari Driver</span> <span>→</span>
+              <span>Perjalanan (Pelacakan Peta)</span> <span>→</span>
+              <span>Selesai & Penilaian</span>
+            </div>
+            <div className="w-full aspect-[16/9] overflow-hidden rounded-2xl border border-gray-200 shadow-md bg-white">
+              <iframe 
+                className="w-full h-full"
+                src={`${figmaBaseUrl}?node-id=2006-954&embed-host=share`} 
+                allowFullScreen
+                style={{ border: "0" }}
+              ></iframe>
+            </div>
+          </div>
+
+          {/* D. Arsitektur Informasi */}
+          <div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">D. Arsitektur Informasi (Information Architecture)</h3>
+            <div className="w-full aspect-[16/9] overflow-hidden rounded-2xl border border-gray-200 shadow-md bg-white">
+              <iframe 
+                className="w-full h-full"
+                src={`${figmaBaseUrl}?node-id=2124-840&embed-host=share`} 
+                allowFullScreen
+                style={{ border: "0" }}
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* 4. PROTOTYPE SECTION */}
+      <section id="purwarupa" className="bg-gray-50/50 px-6 py-24 border-b border-gray-100">
+        <div className="mx-auto max-w-5xl text-center">
+          <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">4. Purwarupa (Prototype)</h2>
+          <p className="mt-4 text-gray-600 mb-12 max-w-2xl mx-auto">
+            Realisasi gagasan ide menjadi visual digital interaktif beresolusi tinggi (High Fidelity Design) beserta simulasi alur transaksinya.
+          </p>
+
+          {/* EMBED INTERACTIVE PROTOTYPE FIGMA (Langsung mengarah ke frame utama rancanganmu) */}
+          <div className="w-full overflow-hidden rounded-2xl border border-gray-200 shadow-xl bg-white aspect-video mb-12">
+            <iframe 
+              className="w-full h-full"
+              src={`${figmaBaseUrl}?node-id=2124-840&embed-host=share`} 
+              allowFullScreen
+              style={{ border: "0" }}
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+
+      {/* 5. TEST SECTION */}
+      <section id="pengujian" className="mx-auto max-w-5xl px-6 py-24">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">5. Pengujian (Test)</h2>
+          <p className="mt-4 text-gray-600">Menguji tingkat efisiensi model desain langsung kepada pengguna target guna mengevaluasi kegunaan sistem.</p>
+        </div>
+
+        {/* EMBED: TESTING FRAME (Ganti node-id sesuai frame dokumentasi uji kamu) */}
+        <div className="w-full aspect-[16/9] overflow-hidden rounded-2xl border border-gray-200 shadow-xl bg-white mb-12">
+          <iframe 
+            className="w-full h-full"
+            src={`${figmaBaseUrl}?node-id=2124-840&embed-host=share`} 
+            allowFullScreen
+            style={{ border: "0" }}
+          ></iframe>
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-5 items-start mb-12">
+          <div className="md:col-span-5 rounded-2xl border border-gray-100 bg-white p-8 shadow-sm space-y-4">
+            <h3 className="font-bold text-lg text-gray-900">Metodologi & Parameter Evaluasi</h3>
+            <p className="text-sm text-gray-600 leading-relaxed">
+              Menggunakan teknik <strong className="text-gray-900">Uji Kegunaan Kualitatif (Qualitative Usability Testing)</strong> dengan memberikan instruksi skenario tugas spesifik secara langsung kepada pengguna.
+            </p>
+            <div className="text-xs text-gray-500 space-y-1">
+              <p>• <strong>Teknik:</strong> Pengujian Berbasis Tugas + Wawancara Evaluatif</p>
+              <p>• <strong>Kriteria Responden:</strong> Mahasiswa pengguna aktif moda transportasi daring</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Tabel Hasil Pengujian */}
+        <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm overflow-hidden">
+          <h3 className="font-bold text-lg text-gray-900 mb-4">Lembar Periksa Hasil Pengujian Skenario</h3>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm text-gray-600">
+              <thead className="bg-gray-50 text-gray-700 uppercase text-xs font-bold">
+                <tr>
+                  <th className="px-4 py-3">Skenario Tugas Pengguna</th>
+                  <th className="px-4 py-3">Status Evaluasi</th>
+                  <th className="px-4 py-3">Umpan Balik / Catatan Kendala</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr>
+                  <td className="px-4 py-4 font-medium text-gray-900">1. Melakukan masuk akun serta pengisian kode verifikasi OTP</td>
+                  <td className="px-4 py-4"><span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">Berhasil</span></td>
+                  <td className="px-4 py-4 text-gray-500">Proses pemasukan kode OTP lancar, tombol aksi merespon dengan cepat.</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-4 font-medium text-gray-900">2. Menentukan titik koordinat penjemputan serta alamat tujuan</td>
+                  <td className="px-4 py-4"><span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">Berhasil</span></td>
+                  <td className="px-4 py-4 text-gray-500">Rekomendasi alamat berbasis titik GPS dinilai akurat dan responsif.</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-4 font-medium text-gray-900">3. Menentukan pilihan jenis armada dan konfirmasi transaksi</td>
+                  <td className="px-4 py-4"><span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">Berhasil</span></td>
+                  <td className="px-4 py-4 text-gray-500">Perbandingan harga antar jenis kendaraan terlihat jelas tanpa perlu menggulir layar jauh.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* PROFIL PERANCANG */}
+      <section className="bg-gray-900 text-white px-6 py-16 text-center border-t border-gray-800">
+        <div className="mx-auto max-w-3xl">
+          <h3 className="text-2xl font-bold tracking-tight">Nadhin Ayudya Rahmadhani</h3>
+          <p className="text-gray-400 font-medium mt-1 text-sm">NIM. 253307040</p>
+          <p className="text-orange-400 font-medium mt-1 text-sm">Program Studi Teknologi Informasi</p>
+          <p className="mt-4 text-xs text-gray-500">Proyek Portofolio UI/UX Aplikasi Transportasi NdanGas - Penilaian Ujian Akhir Semester.</p>
+        </div>
+      </section>
+
+    </main>
+  );
 }
