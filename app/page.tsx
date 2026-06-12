@@ -12,11 +12,11 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl items-center justify-between">
           <div className="text-xl font-black tracking-tight text-orange-500">NdanGas</div>
           <div className="hidden space-x-6 text-sm font-medium text-gray-600 md:flex">
-            <a href="#empati" className="hover:text-orange-500 transition-colors">Empati</a>
-            <a href="#masalah" className="hover:text-orange-500 transition-colors">Masalah</a>
-            <a href="#ide" className="hover:text-orange-500 transition-colors">Ide Solusi</a>
-            <a href="#purwarupa" className="hover:text-orange-500 transition-colors">Purwarupa</a>
-            <a href="#pengujian" className="hover:text-orange-500 transition-colors">Pengujian</a>
+            <a href="#empati" className="hover:text-orange-500 transition-colors">Empathize</a>
+            <a href="#masalah" className="hover:text-orange-500 transition-colors">Define</a>
+            <a href="#ide" className="hover:text-orange-500 transition-colors">Ideat</a>
+            <a href="#purwarupa" className="hover:text-orange-500 transition-colors">Prototype</a>
+            <a href="#pengujian" className="hover:text-orange-500 transition-colors">Test</a>
           </div>
         </div>
       </nav>
@@ -32,12 +32,9 @@ export default function Home() {
         <p className="max-w-2xl text-gray-600 mb-8">
           Studi kasus UI/UX mendalam menggunakan metode Pendekatan Desain (Design Thinking) untuk memangkas kerumitan proses pemesanan kendaraan online.
         </p>
-        <div className="flex gap-4">
-          <a href="#purwarupa" className="rounded-full bg-orange-500 px-6 py-3 font-semibold text-white shadow-lg shadow-orange-500/20 hover:bg-orange-600 transition-all">
-            Coba Purwarupa
-          </a>
-          <a href="#empati" className="rounded-full bg-gray-100 px-6 py-3 font-semibold text-gray-700 hover:bg-gray-200 transition-all">
-            Lihat Studi Kasus
+        <div className="flex justify-center">
+          <a href="#prototype" className="rounded-full bg-orange-500 px-6 py-3 font-semibold text-white shadow-lg shadow-orange-500/20 hover:bg-orange-600 transition-all">
+            Tampilkasn Prototype
           </a>
         </div>
       </section>
@@ -139,7 +136,7 @@ export default function Home() {
       {/* 3. IDEATE SECTION */}
       <section id="ide" className="mx-auto max-w-5xl px-6 py-24 border-b border-gray-100">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">3. Penyusunan Ide (Ideate)</h2>
+          <h2 className="text-4xl font-extrabold text-gray-900 tracking-tight">3. Ideate</h2>
           <p className="mt-4 text-gray-600">
             Proses eksplorasi gagasan kreatif dari sketsa mentah kasar hingga perancangan arsitektur informasi aplikasi yang matang.
           </p>
@@ -148,7 +145,7 @@ export default function Home() {
         <div className="space-y-16">
           {/* A. Curah Ide & Crazy 8's */}
           <div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">A. Curah Ide (Brainstorming) & Crazy 8's</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">A. Brainstorming & Crazy 8's</h3>
             <div className="w-full aspect-[16/9] overflow-hidden rounded-2xl border border-gray-200 shadow-md bg-white">
               <iframe 
                 className="w-full h-full"
@@ -161,7 +158,7 @@ export default function Home() {
 
           {/* B. Sketsa Kerangka Kasar (Low Fidelity Sketches) */}
           <div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">B. Sketsa Kerangka Kasar (Low Fidelity Sketches)</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">B. Low Fidelity Sketches</h3>
             <div className="w-full aspect-[16/9] overflow-hidden rounded-2xl border border-gray-200 shadow-md bg-white">
               <iframe 
                 className="w-full h-full"
@@ -174,7 +171,7 @@ export default function Home() {
 
           {/* C. Alur Pengguna (User Flow) */}
           <div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">C. Alur Jalur Pengguna (User Flow)</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">C. User Flow</h3>
             <div className="rounded-xl bg-orange-50 border border-orange-100 p-6 text-center text-sm font-semibold tracking-wide text-orange-700 flex flex-wrap justify-center gap-2 items-center mb-4">
               <span>Daftar / Masuk Akun</span> <span>→</span>
               <span>Halaman Beranda</span> <span>→</span>
@@ -188,19 +185,6 @@ export default function Home() {
               <iframe 
                 className="w-full h-full"
                 src={`${figmaBaseUrl}?node-id=2006-954&embed-host=share`} 
-                allowFullScreen
-                style={{ border: "0" }}
-              ></iframe>
-            </div>
-          </div>
-
-          {/* D. Arsitektur Informasi */}
-          <div>
-            <h3 className="text-xl font-bold text-gray-900 mb-4">D. Arsitektur Informasi (Information Architecture)</h3>
-            <div className="w-full aspect-[16/9] overflow-hidden rounded-2xl border border-gray-200 shadow-md bg-white">
-              <iframe 
-                className="w-full h-full"
-                src={`${figmaBaseUrl}?node-id=2124-840&embed-host=share`} 
                 allowFullScreen
                 style={{ border: "0" }}
               ></iframe>
